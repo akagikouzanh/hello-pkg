@@ -1,0 +1,12 @@
+[build-system]
+# setuptoolsがv42以上, 依存関係
+requires = ["setuptools>=42", "setuptools_scm[toml]"]
+# setuptoolsを使用してbuildする
+build-backend = "setuptools.build_meta"
+
+# ToDo: バージョン設定は独自の設定にできるようにsetupにまとめる
+[tool.setuptools_scm]
+# 指定したバージョンがない場合は予測して、つけてくれる
+version_scheme = "guess-next-dev"
+# ローカルバージョン識別子を除去する
+local_scheme = "no-local-version"

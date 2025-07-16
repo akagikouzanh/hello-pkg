@@ -1,1 +1,6 @@
-__version__ = '1.0.0'
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("hellopkg")
+except PackageNotFoundError:
+    __version__ = "unknown"
