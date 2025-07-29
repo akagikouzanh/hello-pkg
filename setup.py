@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 def format_version(version):
-    return version.replace("dev-v", "").replace('v', '') if version else None
+    return version.tag.replace("dev-v", "").replace('v', '') if version.tag else None
 
 setup(
     name="hellopkg",
